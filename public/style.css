@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #7f8c8d;
+}
+
+.controls {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#addMemoBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addMemoBtn:hover {
+    background-color: #2980b9;
+}
+
+.memos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.memo {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.memo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.memo-content {
+    min-height: 100px;
+    padding: 10px 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    resize: vertical;
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.memo-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .memo {
+        padding: 15px;
+    }
+    
+    .memo-actions {
+        flex-direction: column;
+    }
+    
+    .delete-btn {
+        width: 100%;
+    }
+}
